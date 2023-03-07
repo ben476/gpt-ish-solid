@@ -1,0 +1,92 @@
+.textarea {
+        /* -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            font: normal 400 16px/25px AkkuratPro, sans-serif;
+            letter-spacing: 0;
+            color: #0e101a;
+            font-family: Inter, sans-serif; */
+            /* box-sizing: border-box; */
+            background: #fff;
+            height: 240px;
+            /* padding: 12px 13px 32px; */
+            margin: 20px;
+            /* width: 100%; */
+            width: auto;
+            /* position:relative */
+            box-shadow: 0 0 20px 15px #ffffff;
+}
+
+.el {
+        /* -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased; */
+            border: none;
+            /* box-sizing: border-box; */
+            color: #161719;
+            height: 100%;
+            margin: 0;
+            outline: none;
+            /* overflow: auto; */
+            resize: none;
+            transition: border .3s;
+            /* vertical-align: top; */
+            width: 100%;
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            /* letter-spacing: -.09px; */
+            font-size: medium;
+}
+
+.checkText {
+        /* -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            font: normal 400 16px/25px AkkuratPro, sans-serif;
+            letter-spacing: 0;
+            color: #0e101a;
+            font-family: Inter, sans-serif; */
+            /* box-sizing: border-box; */
+            background: #ffffffAA;
+            border: 1px solid #e7e9f5;
+            border-radius: 16px;
+            /* height: 316px; */
+            padding: 8px;
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+}
+
+.button {
+    appearance: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+    outline: none;
+    border-radius: 6px;
+    padding: 0 16px;
+    background-color: hsl(212, 98%, 39%);
+    color: white;
+    font-size: 16px;
+    line-height: 0;
+    transition: 250ms background-color;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: hsl(201 96% 32%);
+}
+
+.button:focus-visible {
+    outline: 2px solid hsl(200 98% 39%);
+    outline-offset: 2px;
+}
+
+.button:active {
+    background-color: hsl(201 90% 27%);
+}
+
+/* button disabled */
+.button:disabled {
+    background-color: hsl(200 98% 39%);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
