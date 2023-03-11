@@ -71,10 +71,14 @@
     margin-bottom: 12px;
 }
 
-.close-button {
-    height: 16px;
+.closeButton {
+    /* height: 16px;
     width: 16px;
     color: hsl(240 5% 34%);
+    outline: none;
+    background: none;
+    margin-right: 1em */
+    background-color: inherit;
 }
 
 .title {

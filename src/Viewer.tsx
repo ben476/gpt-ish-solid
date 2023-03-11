@@ -1,6 +1,8 @@
 import { Accessor, createEffect, createSignal, Index, Match, onCleanup, Show, Switch } from 'solid-js';
+import { FiExternalLink } from 'solid-icons/fi'
 
 import SimplePopover from './SimplePopover';
+import Dialog from './Dialog';
 import textboxStyles from "./css/textbox.module.css";
 
 interface ViewerProps {
@@ -101,6 +103,30 @@ export default function Viewer(props: ViewerProps) {
           <h4>Creativity score: {creativity()}</h4>
         </Show>
       </Show>
+      <Dialog
+        title="Word probability"
+        triggerChildren={<>
+          Learn more
+          <FiExternalLink style={{ "margin-left": '5px' }} />
+        </>}
+        triggerProps={{
+          style: {
+            "background": "none",
+            color: "inherit",
+            border: "none",
+            padding: 1,
+            height: "2em",
+          },
+        }}
+      >
+        When you ask an AI to write something for you, a neural network takes in the previous text (if any) and then, for every possible token (think of them as parts of a word), generates the probability of that particular token coming next. It then picks the most* probable token and does this process again until your whole text is generated.
+        <br />
+        <br />
+        The idea that the AI will always pick one of the most likely tokens is the basis for Detect-GPT. By running a modified version of a GPT-like text generator, we can get the probability distributions for each token in the text and allow us to check if they're all just the most likely choices (like what an AI would do) or if there's more human-like variation.
+        <br />
+        <br />
+        <p style={{ "font-size": "0.8em" }}>*Actually, a technique called temperature sampling picks some less likely tokens at times to make your text more interesting.</p>
+      </Dialog>
       <div style={{ "text-align": "start", margin: "20px", "white-space": "pre-wrap" }}>
         <Index each={tokens()}>{(token) => (
           <SimplePopover trigger={<span style={{ "background-color": `rgba(100, 255, 100, ${Math.min(1 - Math.pow(token().place, -0.28), 1)})` }}>{token().word === "\n" ? <br /> : token().word}</span>}>
