@@ -1,17 +1,13 @@
-.trigger {
+/* .trigger {
     outline: none;
     color: hsl(201 96% 32%);
     font-size: 16px;
-}
+} */
 
-.trigger:hover {
-    text-decoration: underline;
-}
-
-.trigger:focus-visible {
+/* .trigger:focus-visible {
     outline: 2px solid hsl(200 98% 39%);
     outline-offset: 2px;
-}
+} */
 
 .content {
     z-index: 50;

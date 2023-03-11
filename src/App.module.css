@@ -14,5 +14,5 @@
 }
 
 .card {
-  width: 70vw
+  width: min(70vw, 1200px)
 }
