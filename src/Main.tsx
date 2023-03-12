@@ -7,6 +7,7 @@ import Viewer from "./Viewer";
 
 const Main: Component = () => {
   const [text, setText] = createSignal("");
+  const [apiOpen, setApiOpen] = createSignal(false);
 
   console.log(text());
 
@@ -17,18 +18,30 @@ const Main: Component = () => {
   return (
     <>
       <div class={appStyles.root}>
-        <div style={{ position: "fixed", top: "0", right: "0" }}>
+        <div
+          style={{
+            position: "fixed",
+            top: "0",
+            right: "0",
+            padding: "18px 32px",
+          }}
+        >
           <Dialog
             triggerChildren="API Access"
             title="API Access"
-            triggerProps={{
-              style: {
-                background: "none",
-                color: "inherit",
-                border: "none",
-                padding: 1,
-                height: "2em",
-              },
+            // triggerProps={{
+            //   style: {
+            //     background: "none",
+            //     color: "inherit",
+            //     border: "none",
+            //     padding: 1,
+            //     height: "2em",
+            //   },
+            // }}
+            trigger={<a onClick={() => setApiOpen(true)}>API Access</a>}
+            rootProps={{
+              isOpen: apiOpen(),
+              onOpenChange: setApiOpen,
             }}
           >
             Interested in an integration with your own apps and services? We'll
@@ -38,6 +51,8 @@ const Main: Component = () => {
             Feel free to contact us at{" "}
             <a href="mailto:api@gpt-ish.com">api@gpt-ish.com</a>
           </Dialog>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://dash.gpt-ish.com">Educator Dashboard</a>
         </div>
         <h1>GPT-ish?</h1>
         <div class={appStyles.card}>
