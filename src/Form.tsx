@@ -43,14 +43,13 @@ export default function Form(props: FormProps) {
               onClick={() => {
                 setText(value());
               }}
-              isDisabled={value().length < 1000}
+              // isDisabled={value().length < 1000}
             >
               Scan
             </Button.Root>
           }
         >
-          GPT-ish works best with at least a few hundred words. We need a
-          minimum of 1000 characters.
+          GPT-ish works best with at least a few hundred words.
         </SimplePopover>
       </div>
     </div>
