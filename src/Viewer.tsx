@@ -163,7 +163,7 @@ export default function Viewer(props: ViewerProps) {
         <br />
         <br />
         The idea that the AI will always pick one of the most likely tokens is
-        the basis for Detect-GPT. By running a modified version of a GPT-like
+        the basis for GPT-ish. By running a modified version of a GPT-like
         text generator, we can get the probability distributions for each token
         in the text and allow us to check if they're all just the most likely
         choices (like what an AI would do) or if there's more human-like
