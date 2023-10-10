@@ -18,6 +18,14 @@ Perplexity-based ChatGPT detector! It uses a reverse-engineered copy of Meta's L
 > \*Actually, a technique called temperature sampling picks some less
 > likely tokens at times to make your text more interesting.
 
+You can see the backend and the insides at [ben476/gpt-ish](https://github.com/ben476/gpt-ish).
+
+## Demo
+
+https://github.com/ben476/gpt-ish-solid/assets/10327898/b8254d2e-407c-4e8b-8dc9-d94756c30c61
+
+
+
 ## Usage
 
 ```bash
