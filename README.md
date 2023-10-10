@@ -1,14 +1,28 @@
+# GPT-ish - Frontend
+
+Perplexity-based ChatGPT detector! It uses a reverse-engineered copy of Meta's LLaMA library/model to find the probabilities of LLaMA generating the same tokens in the text. Or as the app describes it:
+
+> When you ask an AI to write something for you, a neural network takes in
+> the previous text (if any) and then, for every possible token (think of
+> them as parts of a word), generates the probability of that particular
+> token coming next. It then picks the most\* probable token and does this
+> process again until your whole text is generated.
+>
+> The idea that the AI will always pick one of the most likely tokens is
+> the basis for GPT-ish. By running a modified version of a GPT-like
+> text generator, we can get the probability distributions for each token
+> in the text and allow us to check if they're all just the most likely
+> choices (like what an AI would do) or if there's more human-like
+> variation.
+>
+> \*Actually, a technique called temperature sampling picks some less
+> likely tokens at times to make your text more interesting.
+
 ## Usage
-
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
-
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
 
 ```bash
 $ npm install # or pnpm install or yarn install
 ```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
 ## Available Scripts
 
