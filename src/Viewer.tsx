@@ -39,6 +39,8 @@ export default function Viewer(props: ViewerProps) {
   createEffect(() => {
     text();
 
+    console.log(text())
+
     const ws = new WebSocket(
       window.location.origin.replace("http", "ws") + "/api/v1/generate"
     );
@@ -80,7 +82,7 @@ export default function Viewer(props: ViewerProps) {
       setCreativity(
         Math.round(
           100000 *
-            (1 - sorted[Math.floor(Number(tokens().length * 0.9))].probability)
+          (1 - sorted[Math.floor(Number(tokens().length * 0.9))].probability)
         )
       );
     };
@@ -106,7 +108,7 @@ export default function Viewer(props: ViewerProps) {
               <h3>Something went wrong and we can't figure it out 🤔</h3>
             }
           >
-            <Match when={text.length < 1000}>
+            <Match when={text().length < 500}>
               <h3>This text is to short to make a decision.</h3>
             </Match>
             <Match when={creativity() > 50}>
@@ -214,8 +216,8 @@ export default function Viewer(props: ViewerProps) {
                         <tr>
                           <td style={{ float: "left" }}>{word}</td>
                           <td style={{ float: "right" }}>
-                            {probability}
-                            {/* {Math.round(Number(probability) * 1000) / 1000} */}
+                            {/* {probability} */}
+                            {Math.round(Number(probability) * 1000) / 1000}
                           </td>
                         </tr>
                       ))}
